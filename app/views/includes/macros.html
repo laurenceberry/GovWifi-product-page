@@ -46,11 +46,13 @@ GOV.UK&nbsp;&nbsp;{% if name %}<span class="product-name">{{ name }}{% endif %}<
               <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span>
             </div>
             <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-{{ step_index }}.{{ loop.index }}">
+              {% if task.content %}
               <div class="pub-c-task-list__panel-content">
                 <p class="pub-c-task-list__panel-description">
                 {{ task.content }}
                 </p>
               </div>
+              {% endif %}
               <ol class="pub-c-task-list__panel-links" data-length="3">
                 {% for subtask in task.subtasks %}
                 <li class="pub-c-task-list__panel-link ">

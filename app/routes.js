@@ -15,7 +15,6 @@ router.get('/how-to-connect', (req, res) => {
     'steps': [ 
       [{ 
           'name': 'Before you start',
-          'content': '',
           'subtasks': [
             {
               'name': 'Learn how Verify works',
@@ -41,7 +40,6 @@ router.get('/how-to-connect', (req, res) => {
         }],
         [{ 
           'name': 'Research and design your service with Verify',
-          'content': '',
           'subtasks': [
             {
               'name': 'Connect your prototype to Verify',
@@ -60,7 +58,6 @@ router.get('/how-to-connect', (req, res) => {
       , 
         [{ 
           'name': 'Connect Verify to your service',
-          'content': '',
           'subtasks': [
             {
               'name': 'Set up your service to send and receive messages from Verify',
@@ -78,7 +75,6 @@ router.get('/how-to-connect', (req, res) => {
         },
         { 
           'name': 'Prepare for production',
-          'content': '',
           'subtasks': [
             {
               'name': 'Understand the operational support model',
@@ -100,7 +96,6 @@ router.get('/how-to-connect', (req, res) => {
         }],
         [{ 
           'name': "Once you're connected",
-          'content': '',
           'subtasks': [
             {
               'name': 'Manage your connections to Verify',
