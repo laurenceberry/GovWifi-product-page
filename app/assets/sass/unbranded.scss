@@ -11,7 +11,7 @@ $path: "/public/images/";
 
 // Override the govuk_frontend_toolkit's font stack
 // https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_font_stack.scss#L13
-$toolkit-font-stack: $helvetica-regular;
+$toolkit-font-stack: $Helvetica-Regular;
 
 .unbranded {
   background: $white;
@@ -27,4 +27,11 @@ $toolkit-font-stack: $helvetica-regular;
     border: 0;
     background: $white;
   }
+}
+
+
+// Get started indents
+
+.get-started li{
+  margin-left: 20px;
 }

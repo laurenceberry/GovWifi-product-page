@@ -6,4 +6,9 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
+router.get('/verify', (req, res) => {
+  res.render('govuk-verify/index')
+})
+
 module.exports = router
+
