@@ -10,5 +10,9 @@ router.get('/verify', (req, res) => {
   res.render('govuk-verify/index')
 })
 
+router.get('/how-to', (req, res) => {
+  res.render('how-to')
+})
+
 module.exports = router
 
