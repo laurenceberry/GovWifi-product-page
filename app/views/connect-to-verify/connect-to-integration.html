@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Task list
+  Connect to Verify - Connect to a test environment
+{% endblock %}
+
+{% block service_name %}
+{% if data['service-name'] %}
+{{ data['service-name'] }}
+{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -11,24 +17,29 @@
     <div class="column-two-thirds column-minimum">
 
       <h1 class="heading-large">
-        Connect your service to a test environment
+        Connect {{ data['service-name'] }} to a test environment
       </h1>
+      <br>
+      <div>
+        To connect to the Verify test environment, you must complete the steps below.
+      </div>
+
 
       <ol class="task-list">
         <li>
           <h2 class="task-list-section">
-            <span class="task-list-section-number">1. </span> Before you start
+            <span class="task-list-section-number">1. </span> Send and receive messages from Verify
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
               <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="eligibility-completed">
-                Build a service that handles SAML
+                Set up your service to send and receive messages from Verify
               </a>
               <strong class="task-completed" id="eligibility-completed">Completed</strong>
             </li>
             <li class="task-list-item">
               <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
-                Test that your service will work with Verify
+                Check your service can send and receive messages from Verify
               </a>
               <strong class="task-completed" id="read-declaration-completed">Completed</strong>
             </li>
@@ -41,23 +52,27 @@
           <ul class="task-list-items">
             <li class="task-list-item">
               <a class="task-name" href="/connect-to-verify/urls-and-ids">
-                Tell Verify your URLs and IDs
+                Submit your service URLs and IDs
               </a>
+              {% if data['urls-complete'] %}
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
             </li>
             <li class="task-list-item">
               <a class="task-name" href="/connect-to-verify/certificates">
-                Tell Verify which certificates to use
+                Submit security certificates
               </a>
-            </li>
-            <li class="task-list-item">
-              <a class="task-name" href="#">
-                Edit the content shown to your end users
-              </a>
+              {% if data['certificates-complete'] %}
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
             </li>
           </ul>
         </li>
       </ol>
-
+      <div>
+            You can also <a href="/connect-to-verify/end-user-content">edit the content</a> shown to your end users. This is not required to connect to the test environment.
+      </div>
+      <br>
       <div>
         <!-- TODO make this conditional on the sections being complete -->
         <a class="button" href="/connect-to-verify/confirmation">Connect</a>

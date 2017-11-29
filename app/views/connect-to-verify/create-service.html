@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  Connect to Verify - About your service
+{% endblock %}
+
+{% block service_name %}
+<!-- Intentionally blank -->
 {% endblock %}
 
 {% block content %}
@@ -10,7 +14,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/url/of/previous/page">Back</a>
+      <a class="link-back" href="#" onclick="history.back()">Back</a>
 <div class="grid-row">
   <div class="column-two-thirds">
 
@@ -20,75 +24,75 @@
 
     <form autocomplete="off" action="/connect-to-verify/service-summary" method="get">
 
-      
+
   <div class="form-group" >
     <label class="form-label" for="name">
-      
+
         What’s your service called?
-      
-      
+
+
         <span class="form-hint">
           You can change this later
         </span>
-      
-      
+
+
     </label>
-    
-      
-    
-    
-    <input class="form-control form-control-2-3 " data-module="" id="name" name="name" rows="8" type="text" value="">
-    
-    
+
+
+
+
+    <input class="form-control form-control-2-3 " data-module="" id="name" name="service-name" rows="8" type="text" value="">
+
+
   </div>
 
 
-      
+
   <div class="form-group ">
     <fieldset>
       <legend class="form-label">
-        
+
           Who runs this service?
-        
-        
+
+
       </legend>
-      
+
         <div class="multiple-choice">
           <input
             id="organisation_type-0" name="organisation_type" type="radio" value="central"
-            
-            
+
+
           >
           <label class="block-label" for="organisation_type-0">
             Central government
-            
+
           </label>
         </div>
-      
+
         <div class="multiple-choice">
           <input
             id="organisation_type-1" name="organisation_type" type="radio" value="local"
-            
-            
+
+
           >
           <label class="block-label" for="organisation_type-1">
             Local government
-            
+
           </label>
         </div>
-      
+
         <div class="multiple-choice">
           <input
             id="organisation_type-2" name="organisation_type" type="radio" value="nhs"
-            
-            
+
+
           >
           <label class="block-label" for="organisation_type-2">
             NHS
-            
+
           </label>
         </div>
-      
+
     </fieldset>
   </div>
 

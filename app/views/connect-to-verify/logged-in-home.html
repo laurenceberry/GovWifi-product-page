@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Manage your services
+  Connect to Verify - Manage your services
 {% endblock %}
 
 {% block proposition_header %}
@@ -26,11 +26,17 @@
 
       <h2 class="heading-medium">Your services</h2>
 
+      <ul class="list heading-medium">
+      {% if  data['service-name'] %}
+      <li>
+        <a href="/connect-to-verify/service-summary">{{ data['service-name'] }}</a>
+      </li>
+      {% else %}
       <p>You don't have any services yet</p>
-
-      <p>
-        <a class="button" href="/connect-to-verify/create-service" role="button">Add a service</a>
-      </p>
+      {% endif %}
+      <br>
+      <a href="/connect-to-verify/create-service" role="button">Add a service...</a>
+      </ul>
 
     </div>
   </div>

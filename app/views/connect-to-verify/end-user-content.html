@@ -4,13 +4,19 @@
   Question page
 {% endblock %}
 
+{% block service_name %}
+{% if data['service-name'] %}
+{{ data['service-name'] }}
+{% endif %}
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/url/of/previous/page">Back</a>
+      <a class="link-back" href="#" onclick="history.back()">Back</a>
 
       <h2 class="heading-medium">Verify user webpage texts</h2>
     <p>
