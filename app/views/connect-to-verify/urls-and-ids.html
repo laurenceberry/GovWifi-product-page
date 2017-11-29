@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  Connect to Verify - URLs
+{% endblock %}
+
+{% block service_name %}
+{% if data['service-name'] %}
+{{ data['service-name'] }}
+{% endif %}
 {% endblock %}
 
 {% block content %}
