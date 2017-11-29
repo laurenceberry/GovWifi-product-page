@@ -12,21 +12,155 @@
 
       <a class="link-back" href="/url/of/previous/page">Back</a>
 
-      <h1 class="heading-large">Heading or question goes here
-      </h1>
-
       <form class="form" action="/url/of/next/page" method="post">
 
-        <p>[Insert question content here]</p>
+<h2 class="heading-medium">Certificates</h2>
+<p>
+You must supply GOV.UK Verify with copies of the valid X.509 encryption and signature validation
+certificates you will use for your Matching Service Adapter and service.
+</p>
+<div class="panel panel-border-narrow">
+<p>Note: Certificate issuing authorities are environment specific. For the:</p>
+<ul class="list-bullet">
+  <li>Integration environment, use the "IDAP Test Certificate Authority"</li>
+  <li>Production environment, use the "IDAP Certificate Authority"</li>
+</ul>
+</div>
+<p>See <a href="http://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert">request certificates</a></p>
 
-        <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p>
+<div class="form-group ">
+<label class="form-label" for="signature_verification_certificate_transaction">Service signature validation certificate</label>
+
+
+<textarea class="form-control block svc-attachment " name="onboarding_form[signature_verification_certificate_transaction]" id="signature_verification_certificate_transaction" rows="10"></textarea>
+<div>
+Or attach as file (extensions .pem or .crt permitted)
+</div><input class="attachment svc-attachment" name="signature_verification_certificate_transaction-attachment" type="file" accept=".crt, .pem">
+<details>
+<summary>
+<span class="summary">More Information</span>
+</summary>
+<div class="panel panel-border-narrow">
+
+         <p>This certificate is used to validate the SAML messages sent from your service to GOV.UK Verify.</p>
+         <div>This certificate must correspond to the signing private key for your service, and be:
+         <ul class="list-bullet">
+         <li>a valid X.509 certificate</li>
+         <li>signed by the correct IDAP certificate authority for the environment (Integration or Production)</li>
+         <li>different to your Matching Service Adapter signature validation certificate</li>
+         </ul>
+         </div>
+         <p>
+         See
+         <a href= "http://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert">
+         request certificates</a>.
+         </p>
+
+</div>
+</details>
+</div>
+<div class="form-group ">
+<label class="form-label" for="signature_verification_certificate_match">Matching service signature validation certificate</label>
+
+
+<textarea class="form-control block svc-attachment " name="onboarding_form[signature_verification_certificate_match]" id="signature_verification_certificate_match" rows="10"></textarea>
+<div>
+Or attach as file (extensions .pem or .crt permitted)
+</div><input class="attachment svc-attachment" name="signature_verification_certificate_match-attachment" type="file" accept=".crt, .pem">
+<details>
+<summary>
+<span class="summary">More Information</span>
+</summary>
+<div class="panel panel-border-narrow">
+
+         <p>This certificate is used to validate the SAML responses sent from your Matching
+         Service Adapter to GOV.UK Verify.</p>
+         <div>This certificate must correspond to the signing private key for your Matching Service Adapter, and be:
+         <ul class="list-bullet">
+         <li>a valid X.509 certificate</li>
+         <li>signed by the correct IDAP certificate authority for the environment (Integration or Production)</li>
+         <li>different to your service signature validation certificate</li>
+         </ul>
+         </div>
+         <p>
+         See
+         <a href= "http://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert">
+         request certificates</a>.
+         </p>
+
+</div>
+</details>
+</div>
+<div class="form-group ">
+<label class="form-label" for="encryption_certificate_transaction">Service encryption certificate</label>
+
+
+<textarea class="form-control block svc-attachment " name="onboarding_form[encryption_certificate_transaction]" id="encryption_certificate_transaction" rows="10"></textarea>
+<div>
+Or attach as file (extensions .pem or .crt permitted)
+</div><input class="attachment svc-attachment" name="encryption_certificate_transaction-attachment" type="file" accept=".crt, .pem">
+<details>
+<summary>
+<span class="summary">More Information</span>
+</summary>
+<div class="panel panel-border-narrow">
+
+         <p>This certificate is used to encrypt the SAML assertions sent from GOV.UK Verify to your service.</p>
+         <div>This certificate must correspond to the encryption private key for your service, and be:
+         <ul class="list-bullet">
+         <li>a valid X.509 certificate</li>
+         <li>signed by the correct IDAP certificate authority for the environment (Integration or Production)</li>
+         <li>different to your Matching Service Adapter encryption certificate</li>
+         </ul>
+         </div>
+         <p>
+         See
+         <a href= "http://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert">
+         request certificates</a>.
+         </p>
+
+</div>
+</details>
+</div>
+<div class="form-group ">
+<label class="form-label" for="encryption_certificate_match">Matching service encryption certificate</label>
+
+
+<textarea class="form-control block svc-attachment " name="onboarding_form[encryption_certificate_match]" id="encryption_certificate_match" rows="10"></textarea>
+<div>
+Or attach as file (extensions .pem or .crt permitted)
+</div><input class="attachment svc-attachment" name="encryption_certificate_match-attachment" type="file" accept=".crt, .pem">
+<details>
+<summary>
+<span class="summary">More Information</span>
+</summary>
+<div class="panel panel-border-narrow">
+
+         <p>This certificate is used to encrypt the SAML assertions sent from GOV.UK Verify to your Matching
+         Service Adapter.</p>
+         <div>This certificate must correspond to the encryption private key for your Matching Service Adapter, and be:
+         <ul class="list-bullet">
+         <li>a valid X.509 certificate</li>
+         <li>signed by the correct IDAP certificate authority for the environment (Integration or Production)</li>
+         <li>different to your service encryption validation certificate</li>
+         </ul>
+         </div>
+         <p>
+         See
+         <a href= "http://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert">
+         request certificates</a>.
+         </p>
+
+</div>
+</details>
+</div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
         </div>
 
       </form>
-
+      </div>
     </div>
   </div>
 </main>
