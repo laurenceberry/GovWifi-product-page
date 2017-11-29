@@ -4,19 +4,15 @@
   Question page
 {% endblock %}
 
-{% block service_name %}
-{% if data['service-name'] %}
-{{ data['service-name'] }}
-{% endif %}
-{% endblock %}
-
 {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="#" onclick="history.back()">Back</a>
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <form class="form" action="/connect-to-verify/connect-to-integration" method="post">
 
       <h2 class="heading-medium">Verify user webpage texts</h2>
     <p>
@@ -31,8 +27,6 @@
     class="form-control "
     id="service_display_name"
     name="verify-service-display-name"
-    required="required"
-    type="text"
     value="">
 
     <details>
@@ -61,8 +55,6 @@
     class="form-control "
     id="other_ways_display_name"
     name="other-ways-to-apply-display-name"
-    required="required"
-    type="text"
     value="">
 
     <details>
@@ -85,7 +77,6 @@
 
 
   <textarea class="form-control " name="other-ways-to-complete-the-transaction" id="other_ways_complete_transaction" rows="5"></textarea>
-
     <details>
       <summary>
         <span class="summary">More Information</span>
