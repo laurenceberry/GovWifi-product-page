@@ -4,6 +4,12 @@
   Confirmation page example
 {% endblock %}
 
+{% block service_name %}
+{% if data['service-name'] %}
+{{ data['service-name'] }}
+{% endif %}
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
