@@ -13,20 +13,35 @@
       <a class="link-back" href="#" onclick="history.back()">Back</a>
 
       <h1 class="heading-large">
-        Manage service connections
+        Manage {{ data['service-name'] }}
       </h1>
 
-      <p>Mangage connections for <strong class="bold">{{ data['service-name'] }}</strong>.</p>
+      <p>You can connect {{ data['service-name'] }} to Verify prototypes and different environments.</p>
 
-      <h2 class="heading-medium">Get started</h2>
-      <h3 class="heading-small">Connect to Verify prototypes</h3>
-      <p>You haven't connected yet.</p>
-      <p><a href="/connect-to-verify/not-implemented">Connect to a prototype.</a></p>
-      <h3 class="heading-small">Connect to Verify test environment</h3>
-      <p>You haven't connected yet.</p>
-      <p><a href="/connect-to-verify/connect-to-integration">Connect to test environment.</a></p>
 
-    </div>
+    <ul class="task-list">
+      <li>
+        <h2 class="task-list-section">
+          <span class="task-list-section-number">1. </span> Connect your service
+        </h2>
+        <ul class="task-list-items">
+          <li class="task-list-item">
+            <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="eligibility-completed">
+              Connect to a prototype
+            </a>
+            <strong class="task-completed" id="eligibility-completed">Completed</strong>
+          </li>
+          <li class="task-list-item">
+            <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
+              Connect to test environemnt
+            </a>
+            {% if data['TODO'] %}
+            <strong class="task-completed" id="read-declaration-completed">Completed</strong>
+            {% endif %}
+          </li>
+        </ul>
+      </li>
+
     <div class="column-third">
     <aside class="govuk-related-items" role="complementary">
         <h2 class="heading-medium" id="subsection-title">Help and settings</h2>
