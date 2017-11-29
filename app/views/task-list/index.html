@@ -1,244 +1,42 @@
-{% extends "layout.html" %}
+{% extends "govuk-verify.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+Blank page
 {% endblock %}
 
 {% block content %}
 
+{% set heading = 'How to connect to Verify: step by step' %}
 <main id="content" role="main">
+<div class="column-full">
+  <div class="breadcrumbs">
+    <ol>
+      <li>
+        <a href="https://www.gov.uk/service-toolkit#components">Components</a>
+      </li>
+      <li>
+        <a href="/verify">Verify</a>
+      </li>
+      <li class="active">
+        {{ heading }} 
+      </li>
+    </ol>
+  </div>
 
-	<div class="wrapper" id="wrapper">
-
-		<div class="phase-banner">
-		  <p>
-		    <strong class="phase-tag">PROTOTYPE</strong>
-		    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-		  </p>
-		</div>
-
-		<div class="breadcrumbs">
-		    <ol>
-		      <li><a href="/">GOV.UK Verify</a></li>
-		      <li aria-current="page">How to connect to Verify</li>
-		    </ol>
-		</div>
-
-		<div class="grid-row">
-	    	<div class="column-two-thirds">
-	        <h1 class="heading-xlarge">How to connect to Verify</h1>
-
-	        <h2 class="heading-medium">Stuff you can do right away</h2>
-
-		    <div data-module="tasklist" class="pub-c-task-list pub-c-task-list--large pub-c-task-list--active"><div class="pub-c-task-list__controls"></div>
-		      <ol class="pub-c-task-list__groups">
-
-		        <li class="pub-c-task-list__group ">
-		          <span class="pub-c-task-list__number">
-		            <span class="visuallyhidden">Step</span> 1
-		          </span>
-		          <div class="pub-c-task-list__step js-step" id="driving-lessons-and-practice" data-track-count="tasklistSection">
-		            <div class="pub-c-task-list__header js-toggle-panel" data-position="3.1">
-		              <h2 class="pub-c-task-list__title js-step-title"><button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-driving-lessons-and-practice-1">
-		                  Learn how Verify works
-		                </button></h2>
-		                <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span></div>
-
-		            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-driving-lessons-and-practice-1">
-		              <div class="pub-c-task-list__panel-content">
-		                <p class="pub-c-task-list__panel-description">
-		                You need a provisional driving licence to take lessons or practice.
-		                </p>
-		              </div>
-
-		              <ol class="pub-c-task-list__panel-links" data-length="4">
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/guidance/the-highway-code" class="pub-c-task-list__panel-link-item js-panel-link" data-position="3.1.1">
-		                    The Highway Code
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/driving-lessons-learning-to-drive" class="pub-c-task-list__panel-link-item js-panel-link" data-position="3.1.2">
-		                    Taking driving lessons
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/find-driving-schools-and-lessons" class="pub-c-task-list__panel-link-item js-panel-link" data-position="3.1.3">
-		                    Find driving schools, lessons and instructors
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/government/publications/car-show-me-tell-me-vehicle-safety-questions" class="pub-c-task-list__panel-link-item js-panel-link" data-position="3.1.4">
-		                    Practise vehicle safety questions
-		                  </a>
-		                </li>
-		              </ol>
-
-		            </div>
-		          </div>
-		        </li>
-
-		        <li class="pub-c-task-list__group ">
-		          <span class="pub-c-task-list__number">
-		            <span class="visuallyhidden">Step</span> 2
-		          </span>
-		          <div class="pub-c-task-list__step js-step" id="book-and-manage-your-theory-test" data-track-count="tasklistSection">
-		            <div class="pub-c-task-list__header js-toggle-panel" data-position="4.1">
-		              <h2 class="pub-c-task-list__title js-step-title"><button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-theory-test-1">
-		                  Understand liabilities
-		                </button></h2>
-		                <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span></div>
-
-		            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-1">
-		              <div class="pub-c-task-list__panel-content">
-		                <p class="pub-c-task-list__panel-description">
-		                You need a provisional driving licence to book your theory test.
-		                </p>
-		              </div>
-
-		              <ol class="pub-c-task-list__panel-links" data-length="5">
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/book-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.1">
-		                    Book your theory test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/theory-test/what-to-take" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.2">
-		                    What to take to your test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/change-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.3">
-		                    Change your theory test appointment
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/check-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.4">
-		                    Check your theory test appointment details
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/cancel-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.5">
-		                    Cancel your theory test
-		                  </a>
-		                </li>
-		              </ol>
-
-		            </div>
-		          </div>
-		        </li>
-
-		        <li class="pub-c-task-list__group ">
-		          <span class="pub-c-task-list__number">
-		            <span class="visuallyhidden">Step</span> 2
-		          </span>
-		          <div class="pub-c-task-list__step js-step" id="book-and-manage-your-theory-test" data-track-count="tasklistSection">
-		            <div class="pub-c-task-list__header js-toggle-panel" data-position="4.1">
-		              <h2 class="pub-c-task-list__title js-step-title"><button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-theory-test-1">
-		                  Preview contracts
-		                </button></h2>
-		                <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span></div>
-
-		            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-1">
-		              <div class="pub-c-task-list__panel-content">
-		                <p class="pub-c-task-list__panel-description">
-		                You need a provisional driving licence to book your theory test.
-		                </p>
-		              </div>
-
-		              <ol class="pub-c-task-list__panel-links" data-length="5">
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/book-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.1">
-		                    Book your theory test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/theory-test/what-to-take" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.2">
-		                    What to take to your test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/change-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.3">
-		                    Change your theory test appointment
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/check-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.4">
-		                    Check your theory test appointment details
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/cancel-theory-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="4.1.5">
-		                    Cancel your theory test
-		                  </a>
-		                </li>
-		              </ol>
-
-		            </div>
-		          </div>
-		        </li>
-
-		        <li class="pub-c-task-list__group ">
-		          <span class="pub-c-task-list__number">
-		            <span class="visuallyhidden">Step</span> 3
-		          </span>
-		          <div class="pub-c-task-list__step js-step" id="book-and-manage-your-driving-test" data-track-count="tasklistSection">
-		            <div class="pub-c-task-list__header js-toggle-panel" data-position="5.1">
-		              <h2 class="pub-c-task-list__title js-step-title"><button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-driving-test-1">
-		                  Tell GDS you want to connect
-		                </button></h2>
-		                <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span></div>
-
-		            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-book-and-manage-your-driving-test-1">
-		              <div class="pub-c-task-list__panel-content">
-		                <p class="pub-c-task-list__panel-description">
-		                You must pass your theory test before you can book your driving test.
-		                </p>
-		              </div>
-
-		              <ol class="pub-c-task-list__panel-links" data-length="5">
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/book-driving-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="5.1.1">
-		                    Book your driving test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/driving-test/what-to-take" class="pub-c-task-list__panel-link-item js-panel-link" data-position="5.1.2">
-		                    What to take to your test
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/change-driving-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="5.1.3">
-		                    Change your driving test appointment
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/check-driving-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="5.1.4">
-		                    Check your driving test appointment details
-		                  </a>
-		                </li>
-		                <li class="pub-c-task-list__panel-link ">
-		                  <a href="https://www.gov.uk/cancel-driving-test" class="pub-c-task-list__panel-link-item js-panel-link" data-position="5.1.5">
-		                    Cancel your driving test
-		                  </a>
-		                </li>
-		              </ol>
-
-		            </div>
-		          </div>
-		        </li>
-
-		      </ol>
-		    </div>
-		  </div>
-	  </div>
-
-
-
-	</div><!-- / wrapper -->
-
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">
+      {{ heading }}
+    </h1>
+    <p class="pub-c-lead-paragraph">Check what you need to do connect to Verify</p>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    {{ macro.taskList(steps) }}
+  </div>
+</div>
 </main>
 
 {% endblock %}
-
-

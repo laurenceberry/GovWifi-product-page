@@ -24,40 +24,44 @@ GOV.UK&nbsp;&nbsp;{% if name %}<span class="product-name">{{ name }}{% endif %}<
 
 {% endmacro %}
 
-{% macro taskList(tasks) %}
+{% macro taskList(steps) %}
     <div data-module="tasklist" class="pub-c-task-list pub-c-task-list--large pub-c-task-list--active">
       <div class="pub-c-task-list__controls"></div>
       <ol class="pub-c-task-list__groups">
-        {% for task in tasks %}
+        {% for step in steps %}
         <li class="pub-c-task-list__group ">
-          {% set step = loop.index %}
+          {% set step_index = loop.index %}
           <span class="pub-c-task-list__number">
-            <span class="visuallyhidden">Step</span> {{ step }}
+            <span class="visuallyhidden">Step</span> {{ step_index }}
           </span>
           <div class="pub-c-task-list__step js-step" id="check-you&#39;re-allowed-to-drive" data-track-count="tasklistSection">
-            <div class="pub-c-task-list__header js-toggle-panel" data-position="{{ step }}.1">
+            {% for task in step %}
+            {% set task_index = loop.index %}
+            <div class="pub-c-task-list__header js-toggle-panel" data-position="{{ step_index }}.{{ task_index }}">
               <h2 class="pub-c-task-list__title js-step-title">
-                <button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-{{ step }}">
+                <button class="pub-c-task-list__button pub-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-{{ step_index }}.{{ loop.index }}">
                   {{ task.name }}
                 </button>
               </h2>
-              <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span></div>
-            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-{{ step }}">
+              <span class="pub-c-task-list__icon pub-c-task-list__icon--plus"></span><span class="pub-c-task-list__icon pub-c-task-list__icon--minus"></span>
+            </div>
+            <div class="pub-c-task-list__panel js-panel js-hidden" id="step-panel-{{ step_index }}.{{ loop.index }}">
               <div class="pub-c-task-list__panel-content">
                 <p class="pub-c-task-list__panel-description">
-                 {{ task.content }}
+                {{ task.content }}
                 </p>
               </div>
               <ol class="pub-c-task-list__panel-links" data-length="3">
                 {% for subtask in task.subtasks %}
                 <li class="pub-c-task-list__panel-link ">
-                  <a href="{{ subtask.href }}" class="pub-c-task-list__panel-link-item js-panel-link" data-position="{{ step }}.1.{{ loop.index }}">
+                  <a href="{{ subtask.href }}" class="pub-c-task-list__panel-link-item js-panel-link" data-position="{{ step_index }}.{{ task_index }}.{{ loop.index }}">
                     {{ subtask.name }}
                   </a>
                 </li>
                 {% endfor %}
               </ol>
             </div>
+            {% endfor %}
           </div>
         </li>
         {% endfor %}
