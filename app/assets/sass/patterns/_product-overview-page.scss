@@ -7,7 +7,7 @@
 
 	.wrapper{
 	  @extend %site-width-container;
-  	  @extend %contain-floats;	
+  	  @extend %contain-floats;
 	}
 
     background-color: $govuk-blue;
@@ -33,7 +33,7 @@
 
 
 	// Links are white when when background is blue
-	
+
     a {
         color: $white;
 
@@ -44,18 +44,18 @@
 
     // White 'get started' button style
     .button-start, .button-get-started {
-    	background-image: file-url("icon-pointer-blue-02.svg");
+    	background-image: file-url("icon-pointer-blue.png");
         background-size: 20px;
         background-position: 95% 50%;
 	}
 
-	a.button-start{	
+	a.button-start{
 	    background-color: $white;
 	    color: $govuk-blue;
 	    vertical-align: middle;
 	    margin-right: 10px;
         box-shadow: 0 2px 0 darken($govuk-blue, 10%);
-        
+
         &:hover {
             color: $link-hover-colour;
         }
@@ -81,7 +81,7 @@
 
 	.lede{
   		@include core-24;
-        // margin-bottom: 30px;		
+        // margin-bottom: 30px;
 	}
 
 	.button-hint {
@@ -116,7 +116,7 @@
 	   text-indent: -5000px;
 	   cursor: pointer;
 	   color: #fff;
-	   background: $black url(https://assets.publishing.service.gov.uk/manuals-frontend/search-button-de28edec94868c92285a8f97a79bb469.png) 
+	   background: $black url(https://assets.publishing.service.gov.uk/manuals-frontend/search-button-de28edec94868c92285a8f97a79bb469.png)
 	   no-repeat 0 50%;
 	   position: absolute;
 	   -webkit-border-radius: 0;
@@ -148,7 +148,7 @@
 
     img.component-logo {
         width: 110px;
-        margin: $gutter 0 $gutter-half; 
+        margin: $gutter 0 $gutter-half;
         float: right;
 
         @media screen and (max-width: 640px) {
@@ -238,11 +238,11 @@ img .img_org-logos {
 }
 
 .breadcrumbs {
-    
+
     padding-bottom: 5px;
 
     a {
-        
+
     }
 
     .active {
@@ -265,7 +265,7 @@ img .img_org-logos {
     }
 
     ul {
-    
+
         li {
             margin-bottom: 0.75em;
 
@@ -336,10 +336,10 @@ img .img_org-logos {
 }
 
 
-// Grid overrides 
+// Grid overrides
 
 .column-float-left {
-    
+
     float: left;
 
     @media screen and (max-width: 640px) {
@@ -350,7 +350,7 @@ img .img_org-logos {
 }
 
 .column-float-right {
-    
+
     float: right;
 
     @media screen and (max-width: 640px) {
@@ -358,10 +358,10 @@ img .img_org-logos {
         width: 100%;
     }
 
-}     
+}
 
 
-// Transcripts 
+// Transcripts
 
 .transcript {
     margin: 5px 0;
@@ -372,7 +372,7 @@ img .img_org-logos {
     background-color: #DEE0E2;
 
 
-}  
+}
 
 .transcript details[open]{
     background-color: #DEE0E2;
@@ -387,5 +387,3 @@ img .img_org-logos {
 .transcript p {
     padding: 0 15px 0px 10px;
 }
-
-
