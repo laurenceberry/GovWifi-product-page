@@ -28,7 +28,7 @@
     <ul class="task-list">
       <li>
         <h2 class="task-list-section">
-          <span class="task-list-section-number">1. </span> Connect your service
+          <span class="task-list-section-number"></span> Connect your service
         </h2>
         <ul class="task-list-items">
           <li class="task-list-item">
@@ -38,10 +38,10 @@
             <strong class="task-completed" id="eligibility-completed">Completed</strong>
           </li>
           <li class="task-list-item">
-            <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
-              Connect to test environemnt
+            <a class="task-name" href="/connect-to-verify/connect-to-integration" aria-describedby="read-declaration-completed">
+              Connect to test environment
             </a>
-            {% if data['TODO'] %}
+            {% if data['integration-submit'] %}
             <strong class="task-completed" id="read-declaration-completed">Completed</strong>
             {% endif %}
           </li>
