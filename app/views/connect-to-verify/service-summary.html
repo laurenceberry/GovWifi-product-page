@@ -10,29 +10,29 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/url/of/previous/page">Back</a>
+      <a class="link-back" href="#" onclick="history.back()">Back</a>
 
       <h1 class="heading-large">
         Manage service connections
       </h1>
 
-      <h2 class="heading-medium">Connect to Verify prototypes</h2>
-      <p>You haven't connected yet</p>
+      <p>Mangage connections for <strong class="bold">{{ data['service-name'] }}</strong>.</p>
+
+      <h2 class="heading-medium">Get started</h2>
+      <h3 class="heading-small">Connect to Verify prototypes</h3>
+      <p>You haven't connected yet.</p>
       <p><a href="/connect-to-verify/not-implemented">Connect to a prototype.</a></p>
-      <h2 class="heading-medium">Connect to Verify test environment</h2>
-      <p>You haven't connected yet</p>
-      <p><a href="/connect-to-verify/not-implemented">Connect to test environment.</a></p>
-      <h2 class="heading-medium">Connect to Verify production environment</h2>
-      <p>You haven't connected yet</p>
-      <p><a href="/connect-to-verify/not-implemented">Connect to production environment.</a></p>
+      <h3 class="heading-small">Connect to Verify test environment</h3>
+      <p>You haven't connected yet.</p>
+      <p><a href="/connect-to-verify/connect-to-integration">Connect to test environment.</a></p>
 
     </div>
     <div class="column-third">
     <aside class="govuk-related-items" role="complementary">
-        <h2 class="heading-medium" id="subsection-title"></h2>
+        <h2 class="heading-medium" id="subsection-title">Help and settings</h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall">
-            <li><a href="/connect-to-verify/logged-in-home">Your services</a></li>
+            <li><a href="/connect-to-verify/logged-in-home">Switch service</a></li>
             <li><a href="/connect-to-verify/not-implemented">Account settings</a></li>
             <li><a href="/connect-to-verify/not-implemented">Contact Verify</a></li>
           </ul>

@@ -18,9 +18,8 @@
 
   <div class="breadcrumbs">
     <ol>
-      <li><a href="https://www.gov.uk">Home</a></li>
-      <li><a href="">Section</a></li>
-      <li>Subsection</li>
+      <li><a href="https://www.gov.uk">GOV.UK Verify</a></li>
+      <li>Connect your service</li>
     </ol>
   </div>
 
@@ -31,21 +30,60 @@
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
-      <p>Use this service to:</p>
+      <p>You'll need an account to manage your connections to the Verify test and production environments.</p>
 
-      <ul class="list list-bullet">
-        <li>Connect to Verify prototypes</li>
-        <li>Connect to test and production environments</li>
-        <li>Get help from the Verify team</li>
-      </uL>
+			<p>You can add accounts for other team members later.</p>
 
-      <p>
-        <a class="button button-start" href="/connect-to-verify/create-account" role="button">Create an account</a>
-      </p>
+			<p>If you already have an account you can <a href="/connect-to-verify/not-implemented">sign in</a>.</p>
 
-      <h2 class="heading-medium">Before you start</h2>
+			<h1 class="heading-large">Create an account
+      </h1>
 
-      <p>You must have a government email address to use this service.</p>
+      <form class="form" action="/connect-to-verify/logged-in-home" method="get">
+
+        <fieldset class="form-group">
+          <legend>
+            <h2 class="heading-medium">
+              What is your email address?
+            </h2>
+          </legend>
+
+          <div>
+
+            <div class="form-group">
+              <label for="email">Must be a government email address</label>
+              <div><input class="form-control" id="email" name="email" type="text"></div>
+            </div>
+						<span><a href="not-implemented">I don't have a government email address</a></span>
+
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>
+            <h2 class="heading-medium">
+              Create a password
+            </h2>
+          </legend>
+
+          <div>
+
+            <div class="form-group">
+              <label for="password">Password<label>
+                  <div><input class="form-control" id="password" name="password" type="password"></div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password<label>
+              <div><input class="form-control" id="confirm-password" name="confirm-password" type="password"></div>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
 
     </div>
     <div class="column-third">
