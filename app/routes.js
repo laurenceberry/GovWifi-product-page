@@ -11,7 +11,47 @@ router.get('/verify', (req, res) => {
 })
 
 router.get('/how-to', (req, res) => {
-  res.render('how-to')
+  res.render('how-to', {
+    'tasks': 
+      [
+        { 
+          'name': 'foo',
+          'content': 'Foo Bar Baz',
+          'subtasks': [
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            },
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            },
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            }
+          ]
+        },
+        { 
+          'name': 'foo',
+          'content': 'Foo Bar Baz',
+          'subtasks': [
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            },
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            },
+            {
+              'name': 'Foo Bar Baz',
+              'href': '/#'
+            }
+          ]
+        }
+      ]
+  })
 })
 
 module.exports = router
