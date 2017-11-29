@@ -12,15 +12,118 @@
 
       <a class="link-back" href="/url/of/previous/page">Back</a>
 
-      <h1 class="heading-large">Heading or question goes here
-      </h1>
+      <h2 class="heading-medium">URLs</h2>
+    <p>Please supply details of the URLs you will use to receive your matching service requests and service assertions.</p>
+    <div class="form-group ">
+  <label class="form-label" for="service_homepage_url">Service start page URL</label>
 
-      <form class="form" action="/url/of/next/page" method="post">
 
-        <p>[Insert question content here]</p>
+  <input
+    class="form-control "
+    id="service_homepage_url"
+    name="onboarding_form[service_homepage_url]"
+    required="required"
+    type="url"
+    value="">
 
-        <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p>
+    <details>
+      <summary>
+        <span class="summary">More Information</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>This is the URL that gives users access to your service.</p>
+               <p>Your service start page might be a:
+               <ul class="list-bullet">
+               <li>page on GOV.UK, for example https://www.gov.uk/update-company-car-details</li>
+               <li>similar landing page in your testing environment</li>
+               </ul>
+               </p>
+               <p>Do not host private beta services on GOV.UK. (Refer:
+               <a href="https://www.gov.uk/service-manual/design/start-pages">https://www.gov.uk/service-manual/design/start-pages</a>)
+               </p>
 
+      </div>
+    </details>
+</div>
+    <div class="form-group ">
+  <label class="form-label" for="assertion_consumer_services_https_url">Verify SAML response URL</label>
+
+
+  <input
+    class="form-control "
+    id="assertion_consumer_services_https_url"
+    name="onboarding_form[assertion_consumer_services_https_url]"
+    required="required"
+    type="url"
+    value="">
+
+    <details>
+      <summary>
+        <span class="summary">More Information</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>For each connection that you request: Provide a unique URL
+               (The Assertion Consumer Service URL), to receive your Verify SAML responses, for example:</p>
+               <p>Integration: <code>https://{your-service-name}.{your-integration-domain}/verify/response</code></p>
+               <p>Production: <code>https://{your-service-name}.service.gov.uk/verify/response</code></p>
+               </p>
+               <p>You cannot reuse your existing Integration environment URLs in the Production environment.</p>
+
+      </div>
+    </details>
+</div>
+    <div class="form-group ">
+  <label class="form-label" for="matching_service_url">Matching Service Adapter: matching URL</label>
+
+
+  <input
+    class="form-control "
+    id="matching_service_url"
+    name="onboarding_form[matching_service_url]"
+    required="required"
+    type="url"
+    value="">
+
+    <details>
+      <summary>
+        <span class="summary">More Information</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>Tell us which URL you will use to receive your Verify matching service requests, for example:</p>
+               <p>Integration: <code>https://{your-integration-domain}/matching-service/POST</code></p>
+               <p>Production: <code>https://{your-production-domain}.gov.uk/matching-service/POST</code></p>
+               <p>To maintain security, GOV.UK Verify servers only communicate with whitelisted IP addresses.</p>
+      </div>
+    </details>
+</div>
+    <div class="form-group ">
+  <label class="form-label" for="user_account_creation_uri">Matching Service Adapter: User account creation URL</label>
+
+
+  <input
+    class="form-control "
+    id="user_account_creation_uri"
+    name="onboarding_form[user_account_creation_uri]"
+    required="required"
+    type="url"
+    value="">
+
+    <details>
+      <summary>
+        <span class="summary">More Information</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>
+               If your service needs to create user accounts: enter the URL that will accept
+               Verify <em>‘Unknown User Attribute’</em> query requests, for example:
+               </p>
+               <p>Integration: <code>https://{your-integration-domain}/unknown-user-attribute-query</code></p>
+               <p>Production: <code>https://{your-production-domain}.gov.uk/unknown-user-attribute-query</code></p>
+               <p>You only need to do this if you have user account creation enabled for your service.</p>
+
+      </div>
+    </details>
+</div>
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
         </div>
