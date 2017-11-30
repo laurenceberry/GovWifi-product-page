@@ -64,7 +64,7 @@ router.get('/how-to-connect', (req, res) => {
               'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/index.html'
             },
             {
-              'name': 'Test that your service can send and receive message from Verify',
+              'name': 'Test that your service can send and receive messages from Verify',
               'href': '/connect-to-verify'
             },
             {
