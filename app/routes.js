@@ -18,23 +18,23 @@ router.get('/how-to-connect', (req, res) => {
           'subtasks': [
             {
               'name': 'Learn how Verify works',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Understand if your users need to prove their identity',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'See whether Verify meets your service’s identity needs',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Decide what level of assurance your service needs',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Make sure you have the right skills in your team',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             }
           ]
         }],
@@ -43,11 +43,11 @@ router.get('/how-to-connect', (req, res) => {
           'subtasks': [
             {
               'name': 'Figure out where Verify fits in your user journey',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'View case studies',
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Connect your prototype to the Verify demo',
@@ -55,7 +55,7 @@ router.get('/how-to-connect', (req, res) => {
             },
             {
               'name': 'Determine how you will use the verified identity data in your service',
-              'href': '/verify'
+              'href': '/how-to-connect/not-implemented'
             }
           ]
         }]
@@ -82,19 +82,19 @@ router.get('/how-to-connect', (req, res) => {
           'subtasks': [
             {
               'name': 'Understand the operational support model',
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Make sure you have user support for your live service',
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': 'Sign the Code of Interoperability',
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             },
             {
               'name': "Send us a description of your service's volumes and demographics",
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             }
           ]
         }],
@@ -111,12 +111,16 @@ router.get('/how-to-connect', (req, res) => {
             },
             {
               'name': 'Contact Verify for support',
-              'href': '#'
+              'href': '/how-to-connect/not-implemented'
             }
           ]
         }]
       ]
   })
+})
+
+router.get('/how-to-connect/not-implemented', (req, res) => {
+  res.render('task-list/not-implemented')
 })
 
 module.exports = router
