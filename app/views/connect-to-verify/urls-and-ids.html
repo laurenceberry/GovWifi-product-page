@@ -20,10 +20,48 @@
 
       <form class="form" action="/connect-to-verify/connect-to-integration" method="post">
 
-      <h2 class="heading-medium">URLs</h2>
-    <p>Please supply details of the URLs you will use to receive your matching service requests and service assertions.</p>
-    <div class="form-group ">
-  <label class="form-label" for="service_homepage_url">Service start page URL</label>
+      <h2 class="heading-medium">Submit URLs</h2>
+    <p>You must submit URLs for your:
+    <ul class="list list-bullet">
+      <li>service start page</li>
+      <li>service entity id</li>
+      <li>verify saml response</li>
+      <li>matching service adapter url for matching</li>
+    </ul>
+    </p>
+    <p>If you want to allow users to create new accounts for your service you must also submit a matching service adapter url for user account creation.</p>
+
+    <p>The Verify test environment will use these URLs to connect to specific parts of your service.</p>
+    <div class="form-group">
+      <div><label class="heading-small" for="service_homepage_url">Service start page URL</label></div>
+
+
+  <input
+    class="form-control "
+    id="service_homepage_url"
+    name="onboarding_form[service_homepage_url]"
+    value="">
+
+    <details>
+      <summary>
+        <span class="summary">More Information</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>This is the URL that gives users access to your service.</p>
+               <p>Your service start page might be a:
+               <ul class="list-bullet">
+               <li>page on GOV.UK, for example https://www.gov.uk/update-company-car-details</li>
+               <li>similar landing page in your testing environment</li>
+               </ul>
+               </p>
+               <p>Do not host private beta services on GOV.UK. (Refer:
+               <a href="https://www.gov.uk/service-manual/design/start-pages">https://www.gov.uk/service-manual/design/start-pages</a>)
+               </p>
+
+      </div>
+    </details>
+</div><div class="form-group">
+      <div><label class="heading-small" for="service_homepage_url">Service entity id</label></div>
 
 
   <input
@@ -52,7 +90,7 @@
     </details>
 </div>
     <div class="form-group ">
-  <label class="form-label" for="assertion_consumer_services_https_url">Verify SAML response URL</label>
+      <div><label class="heading-small" for="assertion_consumer_services_https_url">Verify SAML response URL</label></div>
 
 
   <input
@@ -77,7 +115,7 @@
     </details>
 </div>
     <div class="form-group ">
-  <label class="form-label" for="matching_service_url">Matching Service Adapter: matching URL</label>
+      <div><label class="heading-small" for="matching_service_url">Matching Service Adapter: matching URL</label></div>
 
 
   <input
@@ -99,7 +137,7 @@
     </details>
 </div>
     <div class="form-group ">
-  <label class="form-label" for="user_account_creation_uri">Matching Service Adapter: User account creation URL</label>
+      <div><label class="heading-small" for="user_account_creation_uri">Matching Service Adapter: User account creation URL</label></div>
 
 
   <input
