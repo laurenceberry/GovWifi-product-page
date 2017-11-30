@@ -21,6 +21,10 @@ router.get('/how-to-connect', (req, res) => {
               'href': '/how-to-connect/not-implemented'
             },
             {
+              'name': 'Learn about the technologies that support Verify',
+              'href': '/how-to-connect/not-implemented'
+            },
+            {
               'name': 'Understand if your users need to prove their identity',
               'href': '/how-to-connect/not-implemented'
             },
