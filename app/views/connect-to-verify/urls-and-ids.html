@@ -1,13 +1,7 @@
-{% extends "layout.html" %}
+{% extends "connect-to-verify/layout.html" %}
 
 {% block page_title %}
   Connect to Verify - URLs
-{% endblock %}
-
-{% block service_name %}
-{% if data['service-name'] %}
-{{ data['service-name'] }}
-{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -20,10 +14,20 @@
 
       <form class="form" action="/connect-to-verify/connect-to-integration" method="post">
 
-      <h2 class="heading-medium">URLs</h2>
-    <p>Please supply details of the URLs you will use to receive your matching service requests and service assertions.</p>
-    <div class="form-group ">
-  <label class="form-label" for="service_homepage_url">Service start page URL</label>
+      <h2 class="heading-medium">Submit URLs</h2>
+    <p>You must submit URLs for your:
+    <ul class="list list-bullet">
+      <li>service start page</li>
+      <li>service entity id</li>
+      <li>Verify SAML response</li>
+      <li>Matching Service Adapter URL for matching</li>
+    </ul>
+    </p>
+    <p>If you want to allow users to create new accounts for your service you must also submit a Matching Service Adapter URL for user account creation.</p>
+
+    <p>The Verify test environment will use these URLs to connect to specific parts of your service.</p>
+    <div class="form-group">
+      <div><label class="heading-small" for="service_homepage_url">Service start page URL</label></div>
 
 
   <input
@@ -32,27 +36,38 @@
     name="onboarding_form[service_homepage_url]"
     value="">
 
-    <details>
+<details>
       <summary>
-        <span class="summary">More Information</span>
+        <span class="summary">What is this?</span>
       </summary>
       <div class="panel panel-border-narrow">
-        <p>This is the URL that gives users access to your service.</p>
-               <p>Your service start page might be a:
-               <ul class="list-bullet">
-               <li>page on GOV.UK, for example https://www.gov.uk/update-company-car-details</li>
-               <li>similar landing page in your testing environment</li>
-               </ul>
-               </p>
-               <p>Do not host private beta services on GOV.UK. (Refer:
-               <a href="https://www.gov.uk/service-manual/design/start-pages">https://www.gov.uk/service-manual/design/start-pages</a>)
-               </p>
-
+  <p>Your service start page URL is the URL that gives users access to your service. For example, https://gov.uk/your-service-name</p>
       </div>
     </details>
+
+</div><div class="form-group">
+      <div><label class="heading-small" for="service_homepage_url">Service entity id</label></div>
+
+
+  <input
+    class="form-control "
+    id="service_homepage_url"
+    name="onboarding_form[service_homepage_url]"
+    value="">
+<details>
+      <summary>
+        <span class="summary">What is this?</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+  <p>Your service entity id is a URL that Verify will use to uniquely identify your service. For example <code>https://gds-verify/connect-to-verify/test.</code></p>
+      </div>
+    </details>
+
+
+
 </div>
     <div class="form-group ">
-  <label class="form-label" for="assertion_consumer_services_https_url">Verify SAML response URL</label>
+      <div><label class="heading-small" for="assertion_consumer_services_https_url">Verify SAML response URL</label></div>
 
 
   <input
@@ -61,23 +76,17 @@
     name="onboarding_form[assertion_consumer_services_https_url]"
     value="">
 
-    <details>
+<details>
       <summary>
-        <span class="summary">More Information</span>
+        <span class="summary">What is this?</span>
       </summary>
       <div class="panel panel-border-narrow">
-        <p>For each connection that you request: Provide a unique URL
-               (The Assertion Consumer Service URL), to receive your Verify SAML responses, for example:</p>
-               <p>Integration: <code>https://{your-service-name}.{your-integration-domain}/verify/response</code></p>
-               <p>Production: <code>https://{your-service-name}.service.gov.uk/verify/response</code></p>
-               </p>
-               <p>You cannot reuse your existing Integration environment URLs in the Production environment.</p>
-
+  <p>The Verify SAML response URL is the URL you use to receive SAML responses from Verify. For example, <code>https://{your-service-name}.{your-integration-domain}/verify/response</code></p>
       </div>
     </details>
 </div>
     <div class="form-group ">
-  <label class="form-label" for="matching_service_url">Matching Service Adapter: matching URL</label>
+      <div><label class="heading-small" for="matching_service_url">Matching Service Adapter: matching URL</label></div>
 
 
   <input
@@ -86,20 +95,17 @@
     name="onboarding_form[matching_service_url]"
     value="">
 
-    <details>
+<details>
       <summary>
-        <span class="summary">More Information</span>
+        <span class="summary">What is this?</span>
       </summary>
       <div class="panel panel-border-narrow">
-        <p>Tell us which URL you will use to receive your Verify matching service requests, for example:</p>
-               <p>Integration: <code>https://{your-integration-domain}/matching-service/POST</code></p>
-               <p>Production: <code>https://{your-production-domain}.gov.uk/matching-service/POST</code></p>
-               <p>To maintain security, GOV.UK Verify servers only communicate with whitelisted IP addresses.</p>
+  <p>Your matching service adapter matching URL is the URL used to receive Verify matching requests. For example, <code>https://{your-integration-domain}/matching-service/POST</code></p>
       </div>
     </details>
 </div>
     <div class="form-group ">
-  <label class="form-label" for="user_account_creation_uri">Matching Service Adapter: User account creation URL</label>
+      <div><label class="heading-small" for="user_account_creation_uri">Matching Service Adapter: User account creation URL</label></div>
 
 
   <input
@@ -108,25 +114,19 @@
     name="user-account-url"
     value="">
 
-    <details>
+<details>
       <summary>
-        <span class="summary">More Information</span>
+        <span class="summary">What is this?</span>
       </summary>
       <div class="panel panel-border-narrow">
-        <p>
-               If your service needs to create user accounts: enter the URL that will accept
-               Verify <em>‘Unknown User Attribute’</em> query requests, for example:
-               </p>
-               <p>Integration: <code>https://{your-integration-domain}/unknown-user-attribute-query</code></p>
-               <p>Production: <code>https://{your-production-domain}.gov.uk/unknown-user-attribute-query</code></p>
-               <p>You only need to do this if you have user account creation enabled for your service.</p>
-
+<p>Your matching service adapter user account creation URL is the URL used to receive Verify account create requests. For example, <code>https://{your-integration-domain}/unknown-user-attribute-query</code></p>
       </div>
     </details>
+    
 </div>
         <div class="form-group">
           <input type="hidden" value="true" name="urls-complete">
-          <input class="button" type="submit" value="Continue">
+          <input class="button" type="submit" value="Submit URLs">
         </div>
 
       </form>

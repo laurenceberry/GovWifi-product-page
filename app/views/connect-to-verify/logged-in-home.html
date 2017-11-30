@@ -21,10 +21,9 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Manage your connections to GOV.UK Verify
+        Manage your services
       </h1>
 
-      <h2 class="heading-medium">Your services</h2>
 
       <ul class="list heading-medium">
       {% if  data['service-name'] %}
@@ -32,7 +31,7 @@
         <a href="/connect-to-verify/service-summary">{{ data['service-name'] }}</a>
       </li>
       {% else %}
-      <p>You don't have any services yet</p>
+      <p>You don't have any services yet.</p>
       {% endif %}
       <br>
       <a href="/connect-to-verify/create-service" role="button">Add a service...</a>
