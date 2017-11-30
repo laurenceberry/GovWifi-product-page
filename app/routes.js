@@ -42,12 +42,16 @@ router.get('/how-to-connect', (req, res) => {
           'name': 'Research and design your service with Verify',
           'subtasks': [
             {
-              'name': 'Connect your prototype to Verify',
-              'href': '/connect-to-verify'
-            },
-            {
               'name': 'Figure out where Verify fits in your user journey',
               'href': '/verify'
+            },
+            {
+              'name': 'View case studies',
+              'href': '#'
+            },
+            {
+              'name': 'Connect your prototype to the Verify demo',
+              'href': '/connect-to-verify'
             },
             {
               'name': 'Determine how you will use the verified identity data in your service',
