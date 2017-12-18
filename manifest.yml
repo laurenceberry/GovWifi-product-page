@@ -1,0 +1,6 @@
+---
+applications:
+  - name: connect-to-verify-prototype
+    env:
+      USERNAME: pirate
+      PASSWORD: bunting
