@@ -10,19 +10,38 @@
     <div class="service-info">
       <h4 class="service-info--name heading-small">{{ data['service-name'] }}</h4>
       <p>
-        <strong class="phase-tag">sandbox test </strong>
+        <strong class="phase-tag">test</strong>
       </p>
     </div>
     <nav role="navigation" class="service-navigation">
       <ul class="service-navigation--list">
               <li class="service-navigation--list-item service-navigation--list-item-active"><a id="navigation-menu-home" href="/">Dashboard</a></li>
-              <li class="service-navigation--list-item"><a id="navigation-menu-transactions" href="/transactions">Transactions</a></li>
               <li class="service-navigation--list-item"><a id="navigation-menu-settings" href="/tokens">Settings</a></li>
       </ul>
     </nav>
   </div>
 
   <h1 class="page-title heading-large first-steps__title">Dashboard</h1>
+
+  <div class="grid-row">
+    <div class="column-third dashboard-panel">
+      <div class="data">
+        <span class="data-item bold-xxlarge">0</span>
+        <span class="data-item bold-xsmall">Successful verifications today</span>
+      </div>
+    </div>
+    <div class="column-third dashboard-panel">
+      <div class="data">
+        <span class="data-item bold-xxlarge">0</span>
+        <span class="data-item bold-xsmall">Successful matches today</span>
+      </div>
+    </div>
+    <div class="column-third dashboard-panel">
+      <h3 class="heading-small">MSA Status</h3>
+      <div><span class="status-flag not-configured">Not configured</span></div>
+      <a href="/connect-to-verify-2/not-implemented" class="bold-xsmall">Configure MSA</a>
+    </div>
+  </div>
 
 </main>
 {% endblock %}
