@@ -25,18 +25,51 @@
     <div class="navigation column-one-third">
         <nav role="navigation" class="settings-navigation">
             <ul>
-              <li class="active"><a href="/connect-to-verify-2/not-implemented">Service details</a></li>
-              <li><a href="/connect-to-verify-2/not-implemented">Matching service details</a></li>
+              <li class="active"><a href="/connect-to-verify-2/settings/service-details">Service details</a></li>
+              <li><a href="/connect-to-verify-2/settings/matching-service-details">Matching service details</a></li>
               <li><a href="/connect-to-verify-2/not-implemented">SAML certificates</a></li>
               <li><a href="/connect-to-verify-2/not-implemented">Configurable text</a></li>
               <li><a href="/connect-to-verify-2/not-implemented">Test users</a></li>
             </ul>
         </nav>
     </div>
-    <div class="column-two-thirds">
+    <form class="column-two-thirds">
       <h1 class="page-title heading-large">Service details</h1>
-    </div>
-  </div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates laborum quis nam inventore asperiores neque non alias? Quaerat tempore doloribus provident modi nam minus nostrum quas dolorem nesciunt eum?</p>
+      <div class="form-group">
+        <div><label class="heading-small" for="service_entity_id">Entity id</label></div>
+        <input class="form-control " id="service_entity_id" name="service_entity_id" value="">
+        <details>
+          <summary>
+            <span class="summary">What is this?</span>
+          </summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              Your entity id is a URL that Verify will use to uniquely identify your service. For example:
+              <div><code>https://{your-service-name}.{your-integration-domain}/verify</code></div>
+            </p>
+          </div>
+        </details>
+      </div>
+      <div class="form-group ">
+        <div><label class="heading-small" for="assertion_consumer_services_https_url">SAML response URL</label></div>
+        <input class="form-control " id="assertion_consumer_services_https_url" name="onboarding_form[assertion_consumer_services_https_url]" value="">
+        <details>
+          <summary>
+            <span class="summary">What is this?</span>
+          </summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              The SAML response URL is the URL you use to receive SAML responses from Verify. For example:
+              <div><code>https://{your-service-name}.{your-integration-domain}/verify/response</code></div>
+            </p>
+          </div>
+        </details>
+      </div>
+      <div class="form-group">
+        <input class="button" type="submit" value="Save">
+      </div>
+    </form>
 </main>
 {% endblock %}
 
