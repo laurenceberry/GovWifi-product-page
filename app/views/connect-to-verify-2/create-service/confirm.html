@@ -1,0 +1,15 @@
+{% extends "connect-to-verify-2/layout.html" %}
+
+{% block page_title %}
+  Account confirmation - GOV.UK Verify
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+<div id="display-email-sent" class="column-two-thirds">
+    <h1 class="heading-large">Check your email</h1>
+    <p>An email has been sent to {{data['email']}}.</p>
+    <p>Click the link in the email to continue your registration.</p>
+</div>
+</main>
+{% endblock %}
