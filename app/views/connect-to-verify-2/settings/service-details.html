@@ -1,0 +1,42 @@
+{% extends "connect-to-verify-2/layout.html" %}
+
+{% block page_title %}
+  Service details - GOV.UK Verify
+{% endblock %}
+
+{% block content %}
+<div class="phase-banner">
+  <div class="service-info">
+    <h4 class="service-info--name heading-small">{{ data['service-name'] }}</h4>
+    <p>
+      <strong class="phase-tag">test</strong>
+    </p>
+  </div>
+  <nav role="navigation" class="service-navigation">
+    <ul class="service-navigation--list">
+            <li class="service-navigation--list-item"><a id="navigation-menu-home" href="/connect-to-verify-2/">Dashboard</a></li>
+            <li class="service-navigation--list-item service-navigation--list-item-active"><a id="navigation-menu-settings" href="/connect-to-verify-2/settings/service-details">Settings</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="navigation column-one-third">
+        <nav role="navigation" class="settings-navigation">
+            <ul>
+              <li class="active"><a href="/connect-to-verify-2/not-implemented">Service details</a></li>
+              <li><a href="/connect-to-verify-2/not-implemented">Matching service details</a></li>
+              <li><a href="/connect-to-verify-2/not-implemented">SAML certificates</a></li>
+              <li><a href="/connect-to-verify-2/not-implemented">Configurable text</a></li>
+              <li><a href="/connect-to-verify-2/not-implemented">Test users</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="column-two-thirds">
+      <h1 class="page-title heading-large">Service details</h1>
+    </div>
+  </div>
+</main>
+{% endblock %}
+

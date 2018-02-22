@@ -8,3 +8,40 @@
 .more-margin-bottom {
   margin-bottom: 60px;
 }
+
+#content {
+  margin-top: 30px;
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+.navigation {
+  ul {
+    padding: 2px 0 30px;
+    li {
+      list-style: none;
+
+      &:first-child {
+        margin-top: -5px;
+      }
+
+      &.active {
+        font-weight: bold;
+      }
+
+      a {
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+        &:link, &:visited {
+          color: $link-colour;
+        }
+        &:focus, &:active {
+          color: $black;
+        }
+      }
+    }
+  }
+}

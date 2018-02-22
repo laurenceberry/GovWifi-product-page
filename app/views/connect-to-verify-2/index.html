@@ -5,22 +5,22 @@
 {% endblock %}
 
 {% block content %}
-<main id="content" role="main">
-  <div class="phase-banner">
-    <div class="service-info">
-      <h4 class="service-info--name heading-small">{{ data['service-name'] }}</h4>
-      <p>
-        <strong class="phase-tag">test</strong>
-      </p>
-    </div>
-    <nav role="navigation" class="service-navigation">
-      <ul class="service-navigation--list">
-              <li class="service-navigation--list-item service-navigation--list-item-active"><a id="navigation-menu-home" href="/">Dashboard</a></li>
-              <li class="service-navigation--list-item"><a id="navigation-menu-settings" href="/tokens">Settings</a></li>
-      </ul>
-    </nav>
+<div class="phase-banner">
+  <div class="service-info">
+    <h4 class="service-info--name heading-small">{{ data['service-name'] }}</h4>
+    <p>
+      <strong class="phase-tag">test</strong>
+    </p>
   </div>
+  <nav role="navigation" class="service-navigation">
+    <ul class="service-navigation--list">
+            <li class="service-navigation--list-item service-navigation--list-item-active"><a id="navigation-menu-home" href="/">Dashboard</a></li>
+            <li class="service-navigation--list-item"><a id="navigation-menu-settings" href="/connect-to-verify-2/settings/service-details">Settings</a></li>
+    </ul>
+  </nav>
+</div>
 
+<main id="content" role="main">
   <h1 class="page-title heading-large first-steps__title">Dashboard</h1>
 
   <div class="grid-row more-margin-bottom">
