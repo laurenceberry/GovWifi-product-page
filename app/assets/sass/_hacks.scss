@@ -1,0 +1,8 @@
+// Proposition links should be aligned right
+#proposition-links {
+  text-align: right;
+  li {
+    display: inline !important;
+    float: none !important;
+  }
+}
