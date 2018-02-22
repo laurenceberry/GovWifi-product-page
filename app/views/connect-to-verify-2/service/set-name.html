@@ -1,4 +1,4 @@
-{% extends "connect-to-verify-2/layout.html" %}
+{% extends "connect-to-verify-2/layout_logged_out.html" %}
 
 {% block page_title %}
   Set the service name - GOV.UK Verify
@@ -7,7 +7,7 @@
 {% block content %}
 <main id="content" role="main">
 <div id="display-name-your-service" class="column-two-thirds">
-  <form action="{{routes.selfCreateService.serviceNaming}}" method="post" class="form submit-two-fa" id="name-your-service-form">
+  <form action="/connect-to-verify-2" method="post" class="form submit-two-fa" id="name-your-service-form">
     <input id="csrf" name="csrfToken" type="hidden" value="{{csrf}}" />
     <h1 class="form-title heading-large">What service will you be proving identities for?</h1>
     <div class="form-group">

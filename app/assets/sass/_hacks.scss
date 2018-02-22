@@ -1,13 +1,4 @@
-// Proposition links should be aligned right
-#proposition-links {
-  text-align: right;
-  li {
-    display: inline !important;
-    float: none !important;
-  }
-}
-
-// Make the header read "GOV.UK Verify" like the pay one does, but have the Verify be small
+/* Make the header read "GOV.UK Verify" like the pay one does, but have the Verify be small */
 .header-logo #logo::after {
   content: "Verify";
   font-weight: 400;
