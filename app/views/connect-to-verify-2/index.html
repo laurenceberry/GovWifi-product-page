@@ -23,7 +23,7 @@
 
   <h1 class="page-title heading-large first-steps__title">Dashboard</h1>
 
-  <div class="grid-row">
+  <div class="grid-row more-margin-bottom">
     <div class="column-third dashboard-panel">
       <div class="data">
         <span class="data-item bold-xxlarge">0</span>
@@ -43,5 +43,37 @@
     </div>
   </div>
 
+  <div class="flex-grid" data-click-events data-click-category="Dashboard" data-click-action="First steps link clicked">
+    <div class="flex-grid--row">
+      <article class="flex-grid--column-half first-steps__box border-bottom">
+        <a href="/make-a-demo-payment">
+          <h2 class="heading-small">Try the Verify user journey</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facilis corporis et rerum, porro, eligendi culpa itaque vero laudantium deserunt</p>
+        </a>
+      </article>
+
+      <article class="flex-grid--column-half first-steps__box border-bottom">
+        <a href="/test-with-your-users">
+          <h2 class="heading-small">Test with your users</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde vel aspernatur maxime, error vero qui delectus consectetur ex exercitationem consequuntur</p>
+        </a>
+      </article>
+
+      <article class="flex-grid--column-{% if isSandbox %}half{% else %}{% if isTestGateway %}third{% else %}half{% endif %}{% endif %} first-steps__box">
+        <a href="/my-services/">
+          <h2 class="heading-small">Manage team members</h2>
+          <p>Administrators can manage team members in My&nbsp;services.</p>
+        </a>
+      </article>
+
+      <article class="flex-grid--column-{% if isSandbox %}half{% else %}third{% endif %} first-steps__box">
+        <a href="https://govukpay-docs.cloudapps.digital/#switching-to-live">
+          <h2 class="heading-small">Next steps to go live</h2>
+          <p>Read our documentation to see how your service can go live with GOV.UK&nbsp;Verify.</p>
+        </a>
+      </article>
+    </div>
+  </div>
+ 
 </main>
 {% endblock %}
