@@ -1,8 +1,10 @@
-{% extends "connect-to-verify-2/layout_logged_out.html" %}
+{% extends "connect-to-verify-2/layout.html" %}
 
 {% block page_title %}
   Team members - GOV.UK Verify
 {% endblock %}
+
+{% block body_classes %}{% endblock %}
 
 {% block content %}
 <div class="phase-banner">
@@ -28,11 +30,10 @@
       <div class="admin-list" id="team-members-view-only-list">
         <h3 id="view-only-role-header" class="admin-list-heading">View only (0)</h3>
         <ul>
-
         </ul>
       </div>
     </div>
-    <a id="invite-team-member-link" class="button" href="/connect-to-verify-2/not-implemented">Invite a team member</a>
+    <a id="invite-team-member-link" class="button" href="/connect-to-verify-2/service/4c16ca1f7d76473aaf7919973ba28925/team-members/invite">Invite a team member</a>
   </div>
 </main>
 {% endblock %}
