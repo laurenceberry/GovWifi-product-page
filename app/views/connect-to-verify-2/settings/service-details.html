@@ -9,7 +9,12 @@
 {% block formContent %}
 <form class="column-two-thirds">
   <h1 class="page-title heading-large">Service details</h1>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates laborum quis nam inventore asperiores neque non alias? Quaerat tempore doloribus provident modi nam minus nostrum quas dolorem nesciunt eum?</p>
+  <p>Verify only accepts requests from services it knows about for security reasons.</p>
+  <p>
+    To configure your service you need to tell Verify an entity id so we can
+    uniquely identify your service and the URL we should send the user back to
+    once their identity has been verified.
+  </p>
   <div class="form-group">
     <div><label class="heading-small" for="service_entity_id">Entity id</label></div>
     <input class="form-control " id="service_entity_id" name="service_entity_id" value="">
