@@ -1,0 +1,31 @@
+{% extends "connect-to-verify-2/settings/layout.html" %}
+
+{% block page_title %}
+  Matching service certificates - GOV.UK Verify
+{% endblock %}
+
+
+{% set settingsPage = 'matching-service-certificates' %}
+{% block formContent %}
+<form class="form column-two-thirds" method="post">
+  <h1 class="page-title heading-large">Matching service certificates</h1>
+
+  <p>Verify will use the certificates to communicate with your matching service securely within the test environment.</p>
+  <p>You can upload your certificates in .pem or .crt formats.</p>
+
+  <div class="form-group ">
+    <label class="form-label" for="signature_verification_certificate_match">Upload matching service signature validation certificate</label>
+    <input class="attachment svc-attachment" name="signature_verification_certificate_match-attachment" type="file" accept=".crt, .pem">
+  </div>
+  <div class="form-group ">
+    <label class="form-label" for="encryption_certificate_match">Upload matching service encryption certificate</label>
+    <input class="attachment svc-attachment" name="encryption_certificate_match-attachment" type="file" accept=".crt, .pem">
+  </div>
+
+  <div class="form-group">
+    <input type="hidden" value="true" name="certificates-complete">
+    <input class="button" type="submit" value="Submit certificates">
+  </div>
+
+</form>
+{% endblock %}
