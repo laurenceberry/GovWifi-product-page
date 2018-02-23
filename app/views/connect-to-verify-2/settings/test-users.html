@@ -6,7 +6,7 @@
 
 
 {% set settingsPage = 'test-users' %}
-{% set serviceSlug = data['service-name'] | lower | replace(' ', '-') | replace("'", '') %}
+{% set serviceSlug = data['service-name'] | lower | kebabCase %}
 {% block formContent %}
 <form class="column-two-thirds">
   <h1 class="page-title heading-large">Test users</h1>
