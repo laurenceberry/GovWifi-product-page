@@ -1,10 +1,3 @@
-/* Make the header read "GOV.UK Verify" like the pay one does, but have the Verify be small */
-.header-logo #logo::after {
-  content: "Verify";
-  font-weight: 400;
-  font-size: 24px;
-  margin-left: 5px;
-}
 .more-margin-bottom {
   margin-bottom: 60px;
 }
