@@ -41,3 +41,15 @@
     }
   }
 }
+
+@include media(tablet) {
+  .grid-row-align-to-edges {
+    > :first-child {
+      text-align: left;
+    }
+
+    > :last-child {
+      text-align: right;
+    }
+  }
+}
