@@ -181,6 +181,13 @@ router.get('/how-to-connect', (req, res) => {
   })
 })
 
+router.get('/connect-to-verify-2/settings/service-certificates/obsolete', (req, res) => {
+  res.render('connect-to-verify-2/settings/service-certificates', {revoked: true})
+})
+router.get('/connect-to-verify-2/settings/matching-service-certificates/obsolete', (req, res) => {
+  res.render('connect-to-verify-2/settings/matching-service-certificates', {revoked: true})
+})
+
 router.get('/how-to-connect/not-implemented', (req, res) => {
   res.render('task-list/not-implemented')
 })
