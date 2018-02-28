@@ -1,0 +1,50 @@
+{% extends "connect-to-verify-2/layout.html" %}
+
+{% block page_title %}
+  Dashboard - GOV.UK Verify
+{% endblock %}
+
+{% set topLevelSection = 'my-services' %}
+{% block body_classes %}
+  alksdjenv-test
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <h1 class="heading-large">My services</h1>
+  <div class="grid-row grid-row-align-to-edges">
+      <div class="column-two-thirds">
+        <p class="lede service-count">You have 1 service</p>
+      </div>
+      <div class="column-one-third">
+        <a href="/connect-to-verify-2/service/set-name" class="create-service">
+            Add a new service
+        </a>
+      </div>
+  </div>
+  <div class="flex-grid">
+    <div class="flex-grid--row service_list_item">
+      <div class="flex-grid--heading-group marked">
+        <h2 class="heading-medium service-name">
+          {{ data['service-name'] }}
+          <a href="/connect-to-verify-2/service/set-name" class="edit-service-name">
+              Edit name
+          </a>
+        </h2>
+      </div>
+      <div class="flex-grid--column-half marked">
+        <ul class="list">
+          <li>
+            <a href="/connect-to-verify-2" class="service-switcher" type="submit" role="link">Integration connection (test)</a>
+          </li>
+        </ul>
+      </div>
+      <div id="team-members" class="flex-grid--column-half marked">
+        <p>
+          <a href="/connect-to-verify-2/service/4c16ca1f7d76473aaf7919973ba28925" class="manage-team-members">Manage team members</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

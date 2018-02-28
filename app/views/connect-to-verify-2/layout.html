@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body_classes %}
+  env-test
+{% endblock %}
+
+{% block proposition_header %}
+
+  <div class="header-proposition">
+    <div class="content">
+      <nav id="proposition-menu">
+        <ul id="proposition-links">
+          <li><a href="https://alphagov.github.io/rp-onboarding-tech-docs/">Documentation</a></li>
+          <li><a class="{% if topLevelSection === 'my-services' %}active{% endif %}" href="/connect-to-verify-2/my-services">My Services</a></li>
+          <li><a href="/prototype-admin/clear-data">Sign out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}

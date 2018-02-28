@@ -181,6 +181,19 @@ router.get('/how-to-connect', (req, res) => {
   })
 })
 
+router.get('/connect-to-verify-2/settings/service-certificates/obsolete', (req, res) => {
+  res.render('connect-to-verify-2/settings/service-certificates', {revoked: true})
+})
+router.get('/connect-to-verify-2/settings/matching-service-certificates/obsolete', (req, res) => {
+  res.render('connect-to-verify-2/settings/matching-service-certificates', {revoked: true})
+})
+router.get('/connect-to-verify-2/settings/service-certificates/upload', (req, res) => {
+  res.render('connect-to-verify-2/settings/upload-certificate', {settingsPage: 'service-certificates'})
+})
+router.get('/connect-to-verify-2/settings/matching-service-certificates/upload', (req, res) => {
+  res.render('connect-to-verify-2/settings/upload-certificate', {settingsPage: 'matching-service-certificates'})
+})
+
 router.get('/how-to-connect/not-implemented', (req, res) => {
   res.render('task-list/not-implemented')
 })

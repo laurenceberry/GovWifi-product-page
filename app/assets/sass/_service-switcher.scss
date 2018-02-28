@@ -1,0 +1,43 @@
+/* Stolen wholesale from https://github.com/alphagov/pay-selfservice/blob/cdd1c432/app/assets/sass/modules/_service_switcher.scss */
+
+.service-switcher {
+  // Remove all decorations to look like normal text link
+  display: inline-block;
+  margin: 0 0 5px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  outline-offset: 0;
+  color: $link-colour;
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &.live {
+   @include core-24;
+   font-weight: bold;
+   margin-bottom: $gutter / 2;
+  }
+}
+
+.service-name a {
+  @include core-14;
+  text-decoration: none;
+  padding-left: 10px;
+
+
+}
+
+.service-switcher.active {
+  background-color: $highlight-colour;
+}
+
+.create-service {
+  display: inline-block;
+  margin-top: 10px;
+}

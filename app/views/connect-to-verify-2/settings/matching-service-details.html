@@ -1,0 +1,51 @@
+{% extends "connect-to-verify-2/settings/layout.html" %}
+
+{% block page_title %}
+  Matching service details - GOV.UK Verify
+{% endblock %}
+
+{% set settingsPage = 'matching-service-details' %}
+{% block formContent %}
+<form class="column-two-thirds">
+  <h1 class="page-title heading-large">Matching service details</h1>
+  <p>Verify call your matching service once the user has proved their identity.</p>
+  <p>
+    You need to pick an entity id so Verify can uniquely refer to your
+    matching service, and tell Verify a URL it can reach your matching service on.
+  </p>
+
+  <div class="form-group">
+    <div><label class="heading-small" for="matching_service_entity_id">Matching Service entity id</label></div>
+    <input class="form-control " id="matching_service_entity_id" name="matching_service_entity_id" value="">
+    <details>
+      <summary>
+        <span class="summary">What is this?</span>
+      </summary>
+      <div class="panel panel-border-narrow">
+        <p>
+          Your matching service entity id is a URL that Verify will use to uniquely identify your matching service. For example:
+          <div><code>https://{your-service-name}.{your-integration-domain}/verify/matching-service</code></div>
+        </p>
+      </div>
+    </details>
+  </div>
+  <div class="form-group ">
+    <div><label class="heading-small" for="matching_service_url">Matching Service Adapter URL</label></div>
+    <input class="form-control " id="matching_service_url" name="onboarding_form[matching_service_url]" value="">
+    <details>
+      <summary><span class="summary">What is this?</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>
+          Your matching service adapter matching URL is the URL used to receive Verify matching requests. For example
+          <div><code>https://{your-integration-domain}/matching-service</code></div>
+        </p>
+      </div>
+    </details>
+  </div>
+
+  <div class="form-group">
+    <input class="button" type="submit" value="Save">
+  </div>
+</form>
+{% endblock %}
+
