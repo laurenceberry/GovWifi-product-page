@@ -30,6 +30,8 @@ $path: "/public/images/";
 @import 'service-switcher';
 @import 'admin-list';
 @import 'hacks';
+@import 'modules/_sub-navigation';
+@import 'modules/_breadcrumbs';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -78,4 +80,63 @@ $path: "/public/images/";
 	li{
 		font-size: 1em;
 	}
+}
+
+.services-link {
+  clear: both;
+  padding-top: 30px;
+}
+
+span.heading-small { display: block; }
+
+.lead-in { margin-bottom: 0; }
+
+.lead-in-bold { font-weight: bold; }
+
+#content.supplementary { margin-top: 0; }
+
+.screenshot {
+  width: 100%;
+  margin-top: 45px;
+}
+
+.logo {
+  padding-left: 10px;
+  border-left-width: 3px;
+  border-left-style: solid;
+  margin-bottom: 30px;
+
+  .logo-logo {
+    display:block;
+    height: 50px;
+    background-image: url(https://assets.publishing.service.gov.uk/government/assets/crests/org_crest_27px_x2-3eb6258ba699c8ae2c3cf370e8a4422f37bdae95ae084a99115841a8bf0543a7.png);
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+  }
+
+  .logo-text {
+    font-size: 0.8em;
+    font-family: Arial;
+    line-height: 1em;
+  }
+}
+
+.logo-defra {
+  border-color: #00a33b;
+}
+
+.logo-dvla {
+  border-color: #006c56;
+}
+
+.logo-dwp {
+  border-color: #00beb7;
+}
+
+.logo-hmrc {
+  border-color: #009390;
+
+  .logo-logo {
+    background-image: url(https://assets.publishing.service.gov.uk/government/assets/crests/hmrc_crest_27px_x2-50c5ae1eac742b467695f5889f93024627e14f1c03a39db7a8e55edfe5d4417a.png);
+  }
 }
